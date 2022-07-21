@@ -9,13 +9,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException
 
-EXTENSION_PATH = os.getcwd() + '\\algosigner.crx'
+EXTENSION_PATH = os.getcwd() + '\\Documents\\algorai-automated\\algosigner.crx'
+print(EXTENSION_PATH)
 
 EXTENSION_ID = 'kmmolakhbgdlpkjkcjkebenjheonagdm'
 
-WEB_SESSION = os.getcwd() + '\\web-session'
+WEB_SESSION = os.getcwd() + '\\Documents\\algorai-automated\\web-session'
 
-driverPath = os.getcwd() + '\\chromedriver.exe'
+driverPath = os.getcwd() + '\\Documents\\algorai-automated\\chromedriver.exe'
 
 password = 'Abc12345'
 
