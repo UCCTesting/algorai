@@ -2,8 +2,6 @@
 ## Introduction
 This package is created to automate algorai blockchain app using selenium webdriver with python programming. 
 
-Note : You need to install python version 3.10.5.
-
 ## Follow Along
 ### Cloning the repository:
 
@@ -15,7 +13,7 @@ git clone https://github.com/UCCTesting/algorai.git
 
 ### Install Python
 
-You will need to install python. For this testing I have chosen to use python 3.10.5.
+You will need to install python first. For this testing I have chosen to use python version 3.10.5.
 
 **NOTE**: Make sure to include the python location in your PATH environment variable
 
