@@ -1,135 +1,54 @@
 
 ## Introduction
-This package is created to automate metamask wallet extension using selenium webdriver. 
+This package is created to automate algorai blockchain app using selenium webdriver with python programming. 
+
+## Follow Along
+### Cloning the repository:
+
+You can get a copy of all files by cloning this repository!
+
+```shell
+git clone https://github.com/UCCTesting/algorai.git
+```
 
 #### To Install The Package:
 
-
-
 ```sh
-pip install ./selenium_metamask_automation
+pip install ./algosigner_setup
 ```
-or
-```sh
-pip install -i https://test.pypi.org/simple/ selenium-metamask-automation
-```
+
 Check if the package exists
 ```sh
 pip list
 ```
 
-## Functions
+### Install web driver
 
-#### 1. To download the extension:
+You will need to install a valid webdriver:
 
-```sh
-selenium_metamask_automation.downloadMetamaskExtension()
+* Chrome:	https://sites.google.com/a/chromium.org/chromedriver/downloads
+* Edge:	https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+* Firefox:	https://github.com/mozilla/geckodriver/releases
+* Safari:	https://webkit.org/blog/6900/webdriver-support-in-safari-10/
+
+For this testing I have chosen to use the web driver for the chrome web browser.
+
+**NOTE**: Make sure to include the ChromeDriver location in your PATH environment variable
+
+### Setup your own wallet
+Please put your **username** and your **password** to set up your own wallet on the file [account_info.txt](https://github.com/UCCTesting/algorai/blob/main/algosigner_setup/account_info.txt)
+
+### Recovery your wallet address
+Please put your **mnemonic phrase** to import your existing wallet on the file [recovery_phrase.txt](https://github.com/UCCTesting/algorai/blob/main/algosigner_setup/recovery_phrase.txt)
+
+### Interact with Chrome via Python Selenium
+
+Open up a terminal and navigate to the root directory of the repository. 
+
+**File** : [main.py](https://github.com/UCCTesting/algorai/blob/main/main.py)
+
+And then execute the test from your command line.
+
+```shell
+python main.py
 ```
-This function has to be run once before all functions to download the metamask extension. If you change the directory or create your python file somewhere else, this needs to be run first otherwise following exception will be thrown:
-
-“Path to extension does not exist”
-
-#### 2. To launch the extension use the function below
-```sh
-selenium_metamask_automation.launchMetamaskExtension(args)
-```
-args: path to chrome webdriver
-
-
-
-This function returns a value which contains the driver. You can retrieve it like:
-```sh
-driver = launchSeleniumWebdriver(r‘C:\Drivers\chromedriver_win32\chromedriver.exe’)
-```
-
-Now use can call any selenium method using this driver variable
-```sh
-driver.get("https://google.com")
-```
-#### 3. To import wallet
-```sh
-selenium_metamask_automation.metamaskSetup(arg1, arg2)
-```
-arg1 : seed phrase of wallet
-arg2: password of wallet
-
-
-#### 4. To Change the metamask Network:
-```sh
-selenium_metamask_automation.changeMetamaskNetwork(arg)
-```
-
-arg: network name
-
-The network names are mentioned below. On selecting any other network, it will throw an error.
-
-- Ethereum Mainnet
-- Ropsten Test Network
-- Kovan Test Network
-- Rinkeby Test Network
-- Goerli Test Network
-
-#### 4. To connect to any website use the function below:
-```sh
-selenium_metamask_automation.connectToWebsite()
-```
-
-In order to use this function, you have to visit the website first
-```sh
-driver.get("https://google.com")
-selenium_metamask_automatiom.connectToWebsite()
-```
-
-#### 6. For approval transactions:
-
-Confirm: 
-```sh 
-selenium_metamask_automation.confirmApprovalFromMetamask()
-```
-
-Reject: 
-```sh 
-selenium_metamask_automation.rejectApprovalFromMetamask()
-```
-
-
-#### 7. For transactions other than approval:
-
-Confirm: 
-```sh
-selenium_metamask_automation.confirmTransactionFromMetamask()
-```
-
-Reject: 
-```sh
-selenium_metamask_automation.rejectTransactionFromMetamask()
-```
-
-#### 8. To add token in your metamask wallet:
-
-```sh
-selenium_metamask_automation.addToken(arg)
-```
-arg: contract address of token
-
-#### 9. Sign:
-
-signConfirm: 
-```sh
-selenium_metamask_automation.signConfirm()
-```
-signReject: 
-```sh
-selenium_metamask_automation.signReject()
-```
-
-
-### Errors you might face:
-
-pip list shows the package ```“selenium_metamask_automation”``` but your IDE does not detect the package
-
-##### Solution:
-
-Go to IDE settings > Python Interpreter 
-
-Change the path to C://ProgramFiles//Python//python.exe or in your case add the path where python.exe is installed
