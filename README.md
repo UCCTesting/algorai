@@ -13,20 +13,15 @@ You can get a copy of all files by cloning this repository!
 git clone https://github.com/UCCTesting/algorai.git
 ```
 
-#### To Install The Package:
+### Install Python
 
-```sh
-pip install ./algorai
-```
+You will need to install python. For this testing I have chosen to use python 3.10.5.
 
-Check if the package exists
-```sh
-pip list
-```
+**NOTE**: Make sure to include the python location in your PATH environment variable
 
-### Install web driver
+### Download web driver
 
-You will need to install a valid webdriver:
+You will need to download a valid webdriver:
 
 * Chrome:	https://sites.google.com/a/chromium.org/chromedriver/downloads
 * Edge:	https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
@@ -36,6 +31,18 @@ You will need to install a valid webdriver:
 For this testing I have chosen to use the web driver for the chrome web browser.
 
 **NOTE**: Make sure to include the ChromeDriver location in your PATH environment variable
+
+#### To Install The Package:
+**NOTE**: You need to run this command outside the algorai folder path.
+
+```sh
+pip install ./algorai
+```
+
+Check if the package exists
+```sh
+pip list
+```
 
 ### Setup your own wallet
 Please put your **username** and your **password** to set up your own wallet on the file [account_info.txt](https://github.com/UCCTesting/algorai/blob/main/algosigner_setup/account_info.txt)
