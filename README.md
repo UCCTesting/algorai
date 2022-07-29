@@ -2,6 +2,8 @@
 ## Introduction
 This package is created to automate algorai blockchain app using selenium webdriver with python programming. 
 
+Note : You need to install python version 3.10.5.
+
 ## Follow Along
 ### Cloning the repository:
 
@@ -14,7 +16,7 @@ git clone https://github.com/UCCTesting/algorai.git
 #### To Install The Package:
 
 ```sh
-pip install ./algosigner_setup
+pip install ./algorai
 ```
 
 Check if the package exists
